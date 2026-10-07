@@ -2,7 +2,7 @@ const { buscar, editar, criar, deletar } = require("../controllers/tarefaControl
 
 const router = require("express").Router();
 
-router.get("/",
+router.get("/:id",
     /* #swagger.tags = ['Tarefas'] */
     /* #swagger.summary = 'Lista os tarefas' */
     /* #swagger.responses[200] = { description: 'Registro retornados com sucesso.', schema: [{ id: 1, titulo: 'titulo teste', descricao: 'descricao' }] } */

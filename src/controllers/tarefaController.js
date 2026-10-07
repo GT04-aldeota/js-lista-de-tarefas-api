@@ -2,7 +2,11 @@ const { PRISMA } = require("../services");
 
 async function buscar(req, res) {
     try {
+        const usuario_id = Number(req.params.id);
         const linhas = await PRISMA.tarefas.findMany({
+            where: {
+                usuario_id
+            }
             orderBy: {
                 id: "asc"
             }
