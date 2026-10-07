@@ -133,7 +133,8 @@ async function login(req, res) {
         delete usuario.senha;
 
         res.json({
-            usuario
+            usuario,
+            mensagem: "Login realizado com sucesso"
         })
 
     } catch (error) {
