@@ -22,4 +22,11 @@ app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use("/usuarios", usuarioRoutes);
 app.use("/tarefas", tarefaRoutes);
 
+app.use((req, res, next) => {
+    res.status(404).json({
+        tipo:"warning",
+        mensagem: "Rota não encontrada"
+    })
+})
+
 app.listen(8000, () => { console.log("Servidor on: http://localhost:8000") });
