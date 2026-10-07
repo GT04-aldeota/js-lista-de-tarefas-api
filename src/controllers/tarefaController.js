@@ -6,7 +6,7 @@ async function buscar(req, res) {
         const linhas = await PRISMA.tarefas.findMany({
             where: {
                 usuario_id
-            }
+            },
             orderBy: {
                 id: "asc"
             }
